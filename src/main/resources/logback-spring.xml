@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration scan="true" debug="false">
+
+    <!-- ======================================================= -->
+    <!--                     GLOBAL SETTINGS                     -->
+    <!-- ======================================================= -->
+    <property name="LOG_HOME" value="./logs" />
+    <property name="APP_NAME" value="prepaid-portal" />
+
+    <!-- Pattern with MDC requestId, user, IP, etc. -->
+    <property name="LOG_PATTERN"
+              value="%d{yyyy-MM-dd HH:mm:ss.SSS} [%X{requestId:-N/A}] [%X{ip:-N/A}] %-5level [%thread] %logger{36} - %msg%n" />
+
+    <!-- ======================================================= -->
+    <!--                      CONSOLE APPENDER                   -->
+    <!-- ======================================================= -->
+    <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>${LOG_PATTERN}</pattern>
+            <charset>UTF-8</charset>
+        </encoder>
+    </appender>
+
+    <!-- ======================================================= -->
+    <!--                     APPLICATION LOG FILE                 -->
+    <!-- ======================================================= -->
+    <appender name="APP_FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${LOG_HOME}/${APP_NAME}.log</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>${LOG_HOME}/${APP_NAME}.%d{yyyy-MM-dd}.log.gz</fileNamePattern>
+            <maxHistory>15</maxHistory> <!-- keep 15 days -->
+        </rollingPolicy>
+        <encoder>
+            <pattern>${LOG_PATTERN}</pattern>
+            <charset>UTF-8</charset>
+        </encoder>
+    </appender>
+
+    <!-- ======================================================= -->
+    <!--                     AUDIT LOG FILE                       -->
+    <!-- ======================================================= -->
+    <appender name="AUDIT_FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${LOG_HOME}/audit/audit.log</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>${LOG_HOME}/audit/audit.%d{yyyy-MM-dd}.log.gz</fileNamePattern>
+            <maxHistory>30</maxHistory>
+        </rollingPolicy>
+        <encoder>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} | requestId=%X{requestId:-N/A} | user=%X{user:-N/A} | ip=%X{ip:-N/A} | %msg%n</pattern>
+            <charset>UTF-8</charset>
+        </encoder>
+    </appender>
+
+    <!-- ======================================================= -->
+    <!--                     ERROR LOG FILE                       -->
+    <!-- ======================================================= -->
+    <appender name="ERROR_FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${LOG_HOME}/error/error.log</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>${LOG_HOME}/error/error.%d{yyyy-MM-dd}.log.gz</fileNamePattern>
+            <maxHistory>10</maxHistory>
+        </rollingPolicy>
+        <filter class="ch.qos.logback.classic.filter.LevelFilter">
+            <level>ERROR</level>
+            <onMatch>ACCEPT</onMatch>
+            <onMismatch>DENY</onMismatch>
+        </filter>
+        <encoder>
+            <pattern>${LOG_PATTERN}</pattern>
+            <charset>UTF-8</charset>
+        </encoder>
+    </appender>
+
+    <!-- ======================================================= -->
+    <!--                      LOGGER DEFINITIONS                  -->
+    <!-- ======================================================= -->
+
+    <!-- Audit logger (write to dedicated audit log) -->
+    <logger name="online.vkay.prepaidportal.audit" additivity="false" level="INFO">
+        <appender-ref ref="AUDIT_FILE" />
+    </logger>
+
+    <!-- Application packages -->
+    <logger name="online.vkay.prepaidportal" level="INFO" additivity="false">
+        <appender-ref ref="CONSOLE" />
+        <appender-ref ref="APP_FILE" />
+    </logger>
+
+    <!-- Hibernate / SQL noise reduction -->
+    <logger name="org.hibernate.SQL" level="WARN" />
+    <logger name="org.springframework" level="INFO" />
+    <logger name="org.apache.http" level="WARN" />
+
+    <!-- ======================================================= -->
+    <!--                      ROOT LOGGER                         -->
+    <!-- ======================================================= -->
+    <root level="INFO">
+        <appender-ref ref="CONSOLE" />
+        <appender-ref ref="APP_FILE" />
+        <appender-ref ref="ERROR_FILE" />
+    </root>
+
+</configuration>

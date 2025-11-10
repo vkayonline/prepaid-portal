@@ -1,0 +1,812 @@
+2025-11-08 06:57:43.699 [N/A] [N/A] INFO  [main] o.v.p.PrepaidPortalApplication - Starting PrepaidPortalApplication using Java 21.0.9 with PID 15788 (D:\repository\prepaid-portal\target\classes started by prasa in D:\repository\prepaid-portal)
+2025-11-08 06:57:43.701 [N/A] [N/A] INFO  [main] o.v.p.PrepaidPortalApplication - No active profile set, falling back to 1 default profile: "default"
+2025-11-08 06:57:44.505 [N/A] [N/A] INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-08 06:57:44.578 [N/A] [N/A] INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 63 ms. Found 4 JPA repository interfaces.
+2025-11-08 06:57:45.316 [N/A] [N/A] INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-11-08 06:57:45.332 [N/A] [N/A] INFO  [main] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-11-08 06:57:45.334 [N/A] [N/A] INFO  [main] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-11-08 06:57:45.334 [N/A] [N/A] INFO  [main] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.48]
+2025-11-08 06:57:45.385 [N/A] [N/A] INFO  [main] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-11-08 06:57:45.386 [N/A] [N/A] INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1634 ms
+2025-11-08 06:57:45.551 [N/A] [N/A] INFO  [main] o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-08 06:57:45.630 [N/A] [N/A] INFO  [main] org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.33.Final
+2025-11-08 06:57:45.684 [N/A] [N/A] INFO  [main] o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-11-08 06:57:46.043 [N/A] [N/A] INFO  [main] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-08 06:57:46.081 [N/A] [N/A] INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-11-08 06:57:47.149 [N/A] [N/A] WARN  [main] o.h.e.jdbc.spi.SqlExceptionHelper - SQL Error: 0, SQLState: 08001
+2025-11-08 06:57:47.150 [N/A] [N/A] ERROR [main] o.h.e.jdbc.spi.SqlExceptionHelper - Connection to localhost:5432 refused. Check that the hostname and port are correct and that the postmaster is accepting TCP/IP connections.
+2025-11-08 06:57:47.154 [N/A] [N/A] WARN  [main] o.h.e.j.e.i.JdbcEnvironmentInitiator - HHH000342: Could not obtain connection to query metadata
+org.hibernate.exception.JDBCConnectionException: unable to obtain isolated JDBC connection [Connection to localhost:5432 refused. Check that the hostname and port are correct and that the postmaster is accepting TCP/IP connections.] [n/a]
+	at org.hibernate.exception.internal.SQLStateConversionDelegate.convert(SQLStateConversionDelegate.java:100)
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:58)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:108)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:94)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcIsolationDelegate.delegateWork(JdbcIsolationDelegate.java:116)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironmentUsingJdbcMetadata(JdbcEnvironmentInitiator.java:334)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:129)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:81)
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:130)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:238)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:215)
+	at org.hibernate.boot.model.relational.Database.<init>(Database.java:45)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.getDatabase(InFlightMetadataCollectorImpl.java:226)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:194)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:171)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1442)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1513)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:66)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:390)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:419)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:400)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:366)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1873)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1822)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:607)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:365)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:135)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveConstructorArguments(ConstructorResolver.java:691)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:513)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1375)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1205)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:569)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:365)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:135)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1725)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1474)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:606)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1708)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1653)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:913)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:240)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1395)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1232)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:569)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:207)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.getOrderedBeansOfType(ServletContextInitializerBeans.java:230)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAsRegistrationBean(ServletContextInitializerBeans.java:184)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAsRegistrationBean(ServletContextInitializerBeans.java:179)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAdaptableBeans(ServletContextInitializerBeans.java:164)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.<init>(ServletContextInitializerBeans.java:96)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.getServletContextInitializerBeans(ServletWebServerApplicationContext.java:271)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.selfInitialize(ServletWebServerApplicationContext.java:245)
+	at org.springframework.boot.web.embedded.tomcat.TomcatStarter.onStartup(TomcatStarter.java:52)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:4452)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1201)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1191)
+	at java.base/java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:317)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:81)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145)
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:747)
+	at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:770)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1201)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1191)
+	at java.base/java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:317)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:81)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145)
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:747)
+	at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:201)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+	at org.apache.catalina.core.StandardService.startInternal(StandardService.java:410)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+	at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:868)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:436)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:128)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.<init>(TomcatWebServer.java:107)
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getTomcatWebServer(TomcatServletWebServerFactory.java:517)
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getWebServer(TomcatServletWebServerFactory.java:219)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.createWebServer(ServletWebServerApplicationContext.java:193)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:167)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:621)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350)
+	at online.vkay.prepaidportal.PrepaidPortalApplication.main(PrepaidPortalApplication.java:10)
+Caused by: org.postgresql.util.PSQLException: Connection to localhost:5432 refused. Check that the hostname and port are correct and that the postmaster is accepting TCP/IP connections.
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:373)
+	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:57)
+	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:279)
+	at org.postgresql.Driver.makeConnection(Driver.java:448)
+	at org.postgresql.Driver.connect(Driver.java:298)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:144)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:370)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:207)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:488)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:576)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:97)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:111)
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:126)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:485)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcIsolationDelegate.delegateWork(JdbcIsolationDelegate.java:61)
+	... 108 common frames omitted
+Caused by: java.net.ConnectException: Connection refused: getsockopt
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:542)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:592)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:751)
+	at org.postgresql.core.PGStream.createSocket(PGStream.java:261)
+	at org.postgresql.core.PGStream.<init>(PGStream.java:122)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.tryConnect(ConnectionFactoryImpl.java:146)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:289)
+	... 122 common frames omitted
+2025-11-08 06:57:47.207 [N/A] [N/A] WARN  [main] org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-11-08 06:57:47.231 [N/A] [N/A] INFO  [main] o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (null)']
+	Database driver: undefined/unknown
+	Database version: 12.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-11-08 06:57:48.357 [N/A] [N/A] INFO  [main] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-08 06:57:48.378 [N/A] [N/A] INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-11-08 06:57:49.388 [N/A] [N/A] WARN  [main] o.h.e.jdbc.spi.SqlExceptionHelper - SQL Error: 0, SQLState: 08001
+2025-11-08 06:57:49.388 [N/A] [N/A] ERROR [main] o.h.e.jdbc.spi.SqlExceptionHelper - Connection to localhost:5432 refused. Check that the hostname and port are correct and that the postmaster is accepting TCP/IP connections.
+2025-11-08 06:57:49.402 [N/A] [N/A] ERROR [main] o.s.o.j.LocalContainerEntityManagerFactoryBean - Failed to initialize JPA EntityManagerFactory: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.JDBCConnectionException: Unable to open JDBC Connection for DDL execution [Connection to localhost:5432 refused. Check that the hostname and port are correct and that the postmaster is accepting TCP/IP connections.] [n/a]
+2025-11-08 06:57:49.410 [N/A] [N/A] ERROR [main] o.s.b.w.e.tomcat.TomcatStarter - Error starting Tomcat context. Exception: org.springframework.beans.factory.UnsatisfiedDependencyException. Message: Error creating bean with name 'authorizationFilter' defined in file [D:\repository\prepaid-portal\target\classes\online\vkay\prepaidportal\common\filter\AuthorizationFilter.class]: Unsatisfied dependency expressed through constructor parameter 1: Error creating bean with name 'userRepository' defined in online.vkay.prepaidportal.repository.UserRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Cannot resolve reference to bean 'jpaSharedEM_entityManagerFactory' while setting bean property 'entityManager'
+2025-11-08 06:57:49.474 [N/A] [N/A] INFO  [main] o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2025-11-08 06:57:49.481 [N/A] [N/A] WARN  [main] o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Unable to start web server
+2025-11-08 06:57:49.491 [N/A] [N/A] INFO  [main] o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-11-08 06:57:49.516 [N/A] [N/A] ERROR [main] o.s.boot.SpringApplication - Application run failed
+org.springframework.context.ApplicationContextException: Unable to start web server
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:170)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:621)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350)
+	at online.vkay.prepaidportal.PrepaidPortalApplication.main(PrepaidPortalApplication.java:10)
+Caused by: org.springframework.boot.web.server.WebServerException: Unable to start embedded Tomcat
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:147)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.<init>(TomcatWebServer.java:107)
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getTomcatWebServer(TomcatServletWebServerFactory.java:517)
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getWebServer(TomcatServletWebServerFactory.java:219)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.createWebServer(ServletWebServerApplicationContext.java:193)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:167)
+	... 8 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'authorizationFilter' defined in file [D:\repository\prepaid-portal\target\classes\online\vkay\prepaidportal\common\filter\AuthorizationFilter.class]: Unsatisfied dependency expressed through constructor parameter 1: Error creating bean with name 'userRepository' defined in online.vkay.prepaidportal.repository.UserRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Cannot resolve reference to bean 'jpaSharedEM_entityManagerFactory' while setting bean property 'entityManager'
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:804)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:240)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1395)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1232)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:569)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:207)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.getOrderedBeansOfType(ServletContextInitializerBeans.java:230)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAsRegistrationBean(ServletContextInitializerBeans.java:184)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAsRegistrationBean(ServletContextInitializerBeans.java:179)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAdaptableBeans(ServletContextInitializerBeans.java:164)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.<init>(ServletContextInitializerBeans.java:96)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.getServletContextInitializerBeans(ServletWebServerApplicationContext.java:271)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.selfInitialize(ServletWebServerApplicationContext.java:245)
+	at org.springframework.boot.web.embedded.tomcat.TomcatStarter.onStartup(TomcatStarter.java:52)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:4452)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1201)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1191)
+	at java.base/java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:317)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:81)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145)
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:747)
+	at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:770)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1201)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1191)
+	at java.base/java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:317)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:81)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145)
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:747)
+	at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:201)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+	at org.apache.catalina.core.StandardService.startInternal(StandardService.java:410)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+	at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:868)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:436)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:128)
+	... 13 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'userRepository' defined in online.vkay.prepaidportal.repository.UserRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Cannot resolve reference to bean 'jpaSharedEM_entityManagerFactory' while setting bean property 'entityManager'
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:377)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:135)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1725)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1474)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:606)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1708)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1653)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:913)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
+	... 56 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'jpaSharedEM_entityManagerFactory': Cannot resolve reference to bean 'entityManagerFactory' while setting constructor argument
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:377)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:135)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveConstructorArguments(ConstructorResolver.java:691)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:513)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1375)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1205)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:569)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:365)
+	... 69 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.JDBCConnectionException: Unable to open JDBC Connection for DDL execution [Connection to localhost:5432 refused. Check that the hostname and port are correct and that the postmaster is accepting TCP/IP connections.] [n/a]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1826)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:607)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:365)
+	... 81 common frames omitted
+Caused by: jakarta.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.JDBCConnectionException: Unable to open JDBC Connection for DDL execution [Connection to localhost:5432 refused. Check that the hostname and port are correct and that the postmaster is accepting TCP/IP connections.] [n/a]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:431)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:400)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:366)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1873)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1822)
+	... 88 common frames omitted
+Caused by: org.hibernate.exception.JDBCConnectionException: Unable to open JDBC Connection for DDL execution [Connection to localhost:5432 refused. Check that the hostname and port are correct and that the postmaster is accepting TCP/IP connections.] [n/a]
+	at org.hibernate.exception.internal.SQLStateConversionDelegate.convert(SQLStateConversionDelegate.java:100)
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:58)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:108)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:94)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl.getIsolatedConnection(DdlTransactionIsolatorNonJtaImpl.java:74)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl.getIsolatedConnection(DdlTransactionIsolatorNonJtaImpl.java:39)
+	at org.hibernate.tool.schema.internal.exec.ImprovedExtractionContextImpl.getJdbcConnection(ImprovedExtractionContextImpl.java:63)
+	at org.hibernate.tool.schema.extract.spi.ExtractionContext.getQueryResults(ExtractionContext.java:43)
+	at org.hibernate.tool.schema.extract.internal.SequenceInformationExtractorLegacyImpl.extractMetadata(SequenceInformationExtractorLegacyImpl.java:39)
+	at org.hibernate.tool.schema.extract.internal.DatabaseInformationImpl.initializeSequences(DatabaseInformationImpl.java:66)
+	at org.hibernate.tool.schema.extract.internal.DatabaseInformationImpl.<init>(DatabaseInformationImpl.java:60)
+	at org.hibernate.tool.schema.internal.Helper.buildDatabaseInformation(Helper.java:185)
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.doMigration(AbstractSchemaMigrator.java:93)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:280)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.lambda$process$5(SchemaManagementToolCoordinator.java:144)
+	at java.base/java.util.HashMap.forEach(HashMap.java:1429)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:141)
+	at org.hibernate.boot.internal.SessionFactoryObserverForSchemaExport.sessionFactoryCreated(SessionFactoryObserverForSchemaExport.java:37)
+	at org.hibernate.internal.SessionFactoryObserverChain.sessionFactoryCreated(SessionFactoryObserverChain.java:35)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:324)
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:463)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1517)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:66)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:390)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:419)
+	... 92 common frames omitted
+Caused by: org.postgresql.util.PSQLException: Connection to localhost:5432 refused. Check that the hostname and port are correct and that the postmaster is accepting TCP/IP connections.
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:373)
+	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:57)
+	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:279)
+	at org.postgresql.Driver.makeConnection(Driver.java:448)
+	at org.postgresql.Driver.connect(Driver.java:298)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:144)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:370)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:207)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:488)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:576)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:97)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:111)
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:126)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:485)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl.getIsolatedConnection(DdlTransactionIsolatorNonJtaImpl.java:46)
+	... 112 common frames omitted
+Caused by: java.net.ConnectException: Connection refused: getsockopt
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:542)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:592)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:751)
+	at org.postgresql.core.PGStream.createSocket(PGStream.java:261)
+	at org.postgresql.core.PGStream.<init>(PGStream.java:122)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.tryConnect(ConnectionFactoryImpl.java:146)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:289)
+	... 126 common frames omitted
+2025-11-08 06:58:34.577 [N/A] [N/A] INFO  [main] o.v.p.PrepaidPortalApplication - Starting PrepaidPortalApplication using Java 21.0.9 with PID 20564 (D:\repository\prepaid-portal\target\classes started by prasa in D:\repository\prepaid-portal)
+2025-11-08 06:58:34.580 [N/A] [N/A] INFO  [main] o.v.p.PrepaidPortalApplication - No active profile set, falling back to 1 default profile: "default"
+2025-11-08 06:58:35.413 [N/A] [N/A] INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-08 06:58:35.499 [N/A] [N/A] INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 66 ms. Found 4 JPA repository interfaces.
+2025-11-08 06:58:36.287 [N/A] [N/A] INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-11-08 06:58:36.302 [N/A] [N/A] INFO  [main] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-11-08 06:58:36.303 [N/A] [N/A] INFO  [main] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-11-08 06:58:36.303 [N/A] [N/A] INFO  [main] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.48]
+2025-11-08 06:58:36.357 [N/A] [N/A] INFO  [main] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-11-08 06:58:36.357 [N/A] [N/A] INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1730 ms
+2025-11-08 06:58:36.586 [N/A] [N/A] INFO  [main] o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-08 06:58:36.680 [N/A] [N/A] INFO  [main] org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.33.Final
+2025-11-08 06:58:36.726 [N/A] [N/A] INFO  [main] o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-11-08 06:58:37.222 [N/A] [N/A] INFO  [main] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-08 06:58:37.260 [N/A] [N/A] INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-11-08 06:58:37.499 [N/A] [N/A] INFO  [main] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@2ca1e49a
+2025-11-08 06:58:37.504 [N/A] [N/A] INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-11-08 06:58:37.575 [N/A] [N/A] WARN  [main] org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-11-08 06:58:37.620 [N/A] [N/A] INFO  [main] o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 18.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-11-08 06:58:38.845 [N/A] [N/A] INFO  [main] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-08 06:58:38.990 [N/A] [N/A] WARN  [main] o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+2025-11-08 06:58:38.991 [N/A] [N/A] WARN  [main] o.h.e.jdbc.spi.SqlExceptionHelper - constraint "uki7tt0xma046ma8ohj9utt63gw" of relation "user_login" does not exist, skipping
+2025-11-08 06:58:38.998 [N/A] [N/A] WARN  [main] o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+2025-11-08 06:58:38.999 [N/A] [N/A] WARN  [main] o.h.e.jdbc.spi.SqlExceptionHelper - constraint "uk3fmuuqnycdbyuxsew3r26cg34" of relation "user_login" does not exist, skipping
+2025-11-08 06:58:39.007 [N/A] [N/A] WARN  [main] o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+2025-11-08 06:58:39.007 [N/A] [N/A] WARN  [main] o.h.e.jdbc.spi.SqlExceptionHelper - constraint "uk6dotkott2kjsp8vw4d0m25fb7" of relation "users" does not exist, skipping
+2025-11-08 06:58:39.017 [N/A] [N/A] WARN  [main] o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+2025-11-08 06:58:39.017 [N/A] [N/A] WARN  [main] o.h.e.jdbc.spi.SqlExceptionHelper - constraint "uk63cf888pmqtt5tipcne79xsbm" of relation "users" does not exist, skipping
+2025-11-08 06:58:39.031 [N/A] [N/A] INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-08 06:58:39.405 [N/A] [N/A] INFO  [main] o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-11-08 06:58:39.883 [N/A] [N/A] WARN  [main] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-11-08 06:58:40.462 [N/A] [N/A] INFO  [main] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-11-08 06:58:40.488 [N/A] [N/A] INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-11-08 06:58:40.499 [N/A] [N/A] INFO  [main] o.v.p.PrepaidPortalApplication - Started PrepaidPortalApplication in 6.598 seconds (process running for 7.578)
+2025-11-08 06:59:28.125 [N/A] [N/A] INFO  [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-11-08 06:59:28.134 [N/A] [N/A] INFO  [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-11-08 06:59:28.139 [N/A] [N/A] INFO  [SpringApplicationShutdownHook] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-08 06:59:28.141 [N/A] [N/A] INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-11-08 06:59:28.146 [N/A] [N/A] INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-11-08 06:59:30.514 [N/A] [N/A] INFO  [main] o.v.p.PrepaidPortalApplication - Starting PrepaidPortalApplication using Java 21.0.9 with PID 20436 (D:\repository\prepaid-portal\target\classes started by prasa in D:\repository\prepaid-portal)
+2025-11-08 06:59:30.516 [N/A] [N/A] INFO  [main] o.v.p.PrepaidPortalApplication - No active profile set, falling back to 1 default profile: "default"
+2025-11-08 06:59:31.083 [N/A] [N/A] INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-08 06:59:31.156 [N/A] [N/A] INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 63 ms. Found 4 JPA repository interfaces.
+2025-11-08 06:59:31.810 [N/A] [N/A] INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-11-08 06:59:31.821 [N/A] [N/A] INFO  [main] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-11-08 06:59:31.824 [N/A] [N/A] INFO  [main] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-11-08 06:59:31.824 [N/A] [N/A] INFO  [main] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.48]
+2025-11-08 06:59:31.871 [N/A] [N/A] INFO  [main] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-11-08 06:59:31.871 [N/A] [N/A] INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1317 ms
+2025-11-08 06:59:32.028 [N/A] [N/A] INFO  [main] o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-08 06:59:32.075 [N/A] [N/A] INFO  [main] org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.33.Final
+2025-11-08 06:59:32.114 [N/A] [N/A] INFO  [main] o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-11-08 06:59:32.426 [N/A] [N/A] INFO  [main] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-08 06:59:32.454 [N/A] [N/A] INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-11-08 06:59:32.643 [N/A] [N/A] INFO  [main] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@174b8d0e
+2025-11-08 06:59:32.645 [N/A] [N/A] INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-11-08 06:59:32.674 [N/A] [N/A] WARN  [main] org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-11-08 06:59:32.694 [N/A] [N/A] INFO  [main] o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 18.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-11-08 06:59:33.702 [N/A] [N/A] INFO  [main] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-08 06:59:33.800 [N/A] [N/A] INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-08 06:59:34.065 [N/A] [N/A] INFO  [main] o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-11-08 06:59:34.520 [N/A] [N/A] WARN  [main] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-11-08 06:59:34.995 [N/A] [N/A] INFO  [main] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-11-08 06:59:35.013 [N/A] [N/A] INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-11-08 06:59:35.021 [N/A] [N/A] INFO  [main] o.v.p.PrepaidPortalApplication - Started PrepaidPortalApplication in 5.074 seconds (process running for 5.796)
+2025-11-08 07:00:23.479 [N/A] [N/A] INFO  [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-11-08 07:00:23.480 [N/A] [N/A] INFO  [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-11-08 07:00:23.481 [N/A] [N/A] INFO  [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2025-11-08 07:02:49.161 [N/A] [N/A] INFO  [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-11-08 07:02:49.171 [N/A] [N/A] INFO  [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-11-08 07:02:49.176 [N/A] [N/A] INFO  [SpringApplicationShutdownHook] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-08 07:02:49.178 [N/A] [N/A] INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-11-08 07:02:49.186 [N/A] [N/A] INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-11-08 07:02:54.379 [N/A] [N/A] INFO  [main] o.v.p.PrepaidPortalApplication - Starting PrepaidPortalApplication using Java 21.0.9 with PID 17300 (D:\repository\prepaid-portal\target\classes started by prasa in D:\repository\prepaid-portal)
+2025-11-08 07:02:54.381 [N/A] [N/A] INFO  [main] o.v.p.PrepaidPortalApplication - No active profile set, falling back to 1 default profile: "default"
+2025-11-08 07:02:54.976 [N/A] [N/A] INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-08 07:02:55.071 [N/A] [N/A] INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 86 ms. Found 4 JPA repository interfaces.
+2025-11-08 07:02:55.702 [N/A] [N/A] INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-11-08 07:02:55.715 [N/A] [N/A] INFO  [main] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-11-08 07:02:55.717 [N/A] [N/A] INFO  [main] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-11-08 07:02:55.717 [N/A] [N/A] INFO  [main] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.48]
+2025-11-08 07:02:55.786 [N/A] [N/A] INFO  [main] o.a.c.c.C.[.[localhost].[/api] - Initializing Spring embedded WebApplicationContext
+2025-11-08 07:02:55.787 [N/A] [N/A] INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1365 ms
+2025-11-08 07:02:55.970 [N/A] [N/A] INFO  [main] o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-08 07:02:56.031 [N/A] [N/A] INFO  [main] org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.33.Final
+2025-11-08 07:02:56.089 [N/A] [N/A] INFO  [main] o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-11-08 07:02:56.465 [N/A] [N/A] INFO  [main] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-08 07:02:56.495 [N/A] [N/A] INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-11-08 07:02:56.658 [N/A] [N/A] INFO  [main] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@1feb586d
+2025-11-08 07:02:56.661 [N/A] [N/A] INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-11-08 07:02:56.700 [N/A] [N/A] WARN  [main] org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-11-08 07:02:56.723 [N/A] [N/A] INFO  [main] o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 18.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-11-08 07:02:57.778 [N/A] [N/A] INFO  [main] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-08 07:02:57.864 [N/A] [N/A] INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-08 07:02:58.200 [N/A] [N/A] INFO  [main] o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-11-08 07:02:58.614 [N/A] [N/A] WARN  [main] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-11-08 07:02:59.112 [N/A] [N/A] INFO  [main] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-11-08 07:02:59.131 [N/A] [N/A] INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/api'
+2025-11-08 07:02:59.138 [N/A] [N/A] INFO  [main] o.v.p.PrepaidPortalApplication - Started PrepaidPortalApplication in 5.326 seconds (process running for 5.955)
+2025-11-08 07:03:02.038 [N/A] [N/A] INFO  [http-nio-8080-exec-3] o.a.c.c.C.[.[localhost].[/api] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-11-08 07:03:02.039 [N/A] [N/A] INFO  [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-11-08 07:03:02.040 [N/A] [N/A] INFO  [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2025-11-08 07:03:04.878 [WOcAnKEkT8uP7RDJIM6IkQ] [0:0:0:0:0:0:0:1] INFO  [http-nio-8080-exec-3] o.v.p.c.filter.RequestLoggingFilter - Incoming [GET /api/v1/public/keys] headers=host=localhost:8080; connection=keep-alive; sec-ch-ua="Chromium";v="142", "Microsoft Edge";v="142", "Not_A Brand";v="99"; sec-ch-ua-mobile=?0; sec-ch-ua-platform="Windows"; upgrade-insecure-requests=1; user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36 Edg/142.0.0.0; accept=text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7; sec-fetch-site=none; sec-fetch-mode=navigate; sec-fetch-user=?1; sec-fetch-dest=document; accept-encoding=gzip, deflate, br, zstd; accept-language=en-GB,en-US;q=0.9,en-IN;q=0.8,en;q=0.7,ta;q=0.6; cookie=ext_name=gdgnlfdenkmjcfgjpnookbglpndleahm; 
+2025-11-08 07:03:04.930 [WOcAnKEkT8uP7RDJIM6IkQ] [0:0:0:0:0:0:0:1] INFO  [http-nio-8080-exec-3] o.v.p.c.aspect.MethodLoggingAspect - ➡️ Entering [online.vkay.prepaidportal.controller.PublicController.getActivePublicKey] with args: []
+2025-11-08 07:03:04.931 [WOcAnKEkT8uP7RDJIM6IkQ] [0:0:0:0:0:0:0:1] INFO  [http-nio-8080-exec-3] o.v.p.c.aspect.MethodLoggingAspect - ➡️ Entering [online.vkay.prepaidportal.service.CryptoKeyService.getActiveKey] with args: []
+2025-11-08 07:03:04.936 [WOcAnKEkT8uP7RDJIM6IkQ] [0:0:0:0:0:0:0:1] INFO  [http-nio-8080-exec-3] o.v.p.c.aspect.MethodLoggingAspect - ✅ Exiting [online.vkay.prepaidportal.service.CryptoKeyService.getActiveKey] | resultType=CryptoKey | time=5ms
+2025-11-08 07:03:04.942 [WOcAnKEkT8uP7RDJIM6IkQ] [0:0:0:0:0:0:0:1] INFO  [http-nio-8080-exec-3] o.v.p.c.aspect.MethodLoggingAspect - ✅ Exiting [online.vkay.prepaidportal.controller.PublicController.getActivePublicKey] | resultType=ResponseEntity | time=11ms
+2025-11-08 07:04:32.426 [N/A] [N/A] INFO  [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-11-08 07:04:32.434 [N/A] [N/A] INFO  [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-11-08 07:04:32.438 [N/A] [N/A] INFO  [SpringApplicationShutdownHook] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-08 07:04:32.439 [N/A] [N/A] INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-11-08 07:04:32.447 [N/A] [N/A] INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-11-08 07:04:35.031 [N/A] [N/A] INFO  [main] o.v.p.PrepaidPortalApplication - Starting PrepaidPortalApplication using Java 21.0.9 with PID 19656 (D:\repository\prepaid-portal\target\classes started by prasa in D:\repository\prepaid-portal)
+2025-11-08 07:04:35.033 [N/A] [N/A] INFO  [main] o.v.p.PrepaidPortalApplication - No active profile set, falling back to 1 default profile: "default"
+2025-11-08 07:04:35.647 [N/A] [N/A] INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-08 07:04:35.742 [N/A] [N/A] INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 81 ms. Found 4 JPA repository interfaces.
+2025-11-08 07:04:36.479 [N/A] [N/A] INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-11-08 07:04:36.494 [N/A] [N/A] INFO  [main] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-11-08 07:04:36.497 [N/A] [N/A] INFO  [main] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-11-08 07:04:36.497 [N/A] [N/A] INFO  [main] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.48]
+2025-11-08 07:04:36.553 [N/A] [N/A] INFO  [main] o.a.c.c.C.[.[localhost].[/api] - Initializing Spring embedded WebApplicationContext
+2025-11-08 07:04:36.554 [N/A] [N/A] INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1485 ms
+2025-11-08 07:04:36.711 [N/A] [N/A] INFO  [main] o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-08 07:04:36.765 [N/A] [N/A] INFO  [main] org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.33.Final
+2025-11-08 07:04:36.800 [N/A] [N/A] INFO  [main] o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-11-08 07:04:37.117 [N/A] [N/A] INFO  [main] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-08 07:04:37.157 [N/A] [N/A] INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-11-08 07:04:37.304 [N/A] [N/A] INFO  [main] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@1f4dd016
+2025-11-08 07:04:37.306 [N/A] [N/A] INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-11-08 07:04:37.334 [N/A] [N/A] WARN  [main] org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-11-08 07:04:37.359 [N/A] [N/A] INFO  [main] o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 18.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-11-08 07:04:38.384 [N/A] [N/A] INFO  [main] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-08 07:04:38.475 [N/A] [N/A] INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-08 07:04:38.774 [N/A] [N/A] INFO  [main] o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-11-08 07:04:39.299 [N/A] [N/A] WARN  [main] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-11-08 07:04:39.951 [N/A] [N/A] INFO  [main] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-11-08 07:04:39.971 [N/A] [N/A] INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/api'
+2025-11-08 07:04:39.977 [N/A] [N/A] INFO  [main] o.v.p.PrepaidPortalApplication - Started PrepaidPortalApplication in 5.493 seconds (process running for 6.219)
+2025-11-08 07:05:23.139 [N/A] [N/A] INFO  [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-11-08 07:05:23.151 [N/A] [N/A] INFO  [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-11-08 07:05:23.157 [N/A] [N/A] INFO  [SpringApplicationShutdownHook] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-08 07:05:23.159 [N/A] [N/A] INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-11-08 07:05:23.162 [N/A] [N/A] INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-11-08 07:05:25.642 [N/A] [N/A] INFO  [main] o.v.p.PrepaidPortalApplication - Starting PrepaidPortalApplication using Java 21.0.9 with PID 10064 (D:\repository\prepaid-portal\target\classes started by prasa in D:\repository\prepaid-portal)
+2025-11-08 07:05:25.644 [N/A] [N/A] INFO  [main] o.v.p.PrepaidPortalApplication - No active profile set, falling back to 1 default profile: "default"
+2025-11-08 07:05:26.223 [N/A] [N/A] INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-08 07:05:26.297 [N/A] [N/A] INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 66 ms. Found 4 JPA repository interfaces.
+2025-11-08 07:05:26.984 [N/A] [N/A] INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-11-08 07:05:26.996 [N/A] [N/A] INFO  [main] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-11-08 07:05:26.997 [N/A] [N/A] INFO  [main] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-11-08 07:05:26.997 [N/A] [N/A] INFO  [main] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.48]
+2025-11-08 07:05:27.045 [N/A] [N/A] INFO  [main] o.a.c.c.C.[.[localhost].[/api] - Initializing Spring embedded WebApplicationContext
+2025-11-08 07:05:27.045 [N/A] [N/A] INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1363 ms
+2025-11-08 07:05:27.178 [N/A] [N/A] INFO  [main] o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-08 07:05:27.240 [N/A] [N/A] INFO  [main] org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.33.Final
+2025-11-08 07:05:27.268 [N/A] [N/A] INFO  [main] o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-11-08 07:05:27.635 [N/A] [N/A] INFO  [main] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-08 07:05:27.673 [N/A] [N/A] INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-11-08 07:05:27.817 [N/A] [N/A] INFO  [main] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@300aa927
+2025-11-08 07:05:27.819 [N/A] [N/A] INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-11-08 07:05:27.847 [N/A] [N/A] WARN  [main] org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-11-08 07:05:27.870 [N/A] [N/A] INFO  [main] o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 18.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-11-08 07:05:28.854 [N/A] [N/A] INFO  [main] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-08 07:05:28.954 [N/A] [N/A] INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-08 07:05:29.285 [N/A] [N/A] INFO  [main] o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-11-08 07:05:29.401 [N/A] [N/A] DEBUG [main] org.hibernate.SQL - SELECT * FROM crypto_keys
+WHERE expires_at > ?
+ORDER BY created_at DESC
+LIMIT 1
+
+2025-11-08 07:05:29.403 [N/A] [N/A] TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (1:TIMESTAMP) <- [2025-11-08T07:00:29.303376600]
+2025-11-08 07:05:29.755 [N/A] [N/A] WARN  [main] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-11-08 07:05:30.298 [N/A] [N/A] INFO  [main] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-11-08 07:05:30.321 [N/A] [N/A] INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/api'
+2025-11-08 07:05:30.330 [N/A] [N/A] INFO  [main] o.v.p.PrepaidPortalApplication - Started PrepaidPortalApplication in 5.216 seconds (process running for 5.886)
+2025-11-08 07:05:45.480 [N/A] [N/A] INFO  [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-11-08 07:05:45.489 [N/A] [N/A] INFO  [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-11-08 07:05:45.494 [N/A] [N/A] INFO  [SpringApplicationShutdownHook] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-08 07:05:45.495 [N/A] [N/A] INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-11-08 07:05:45.504 [N/A] [N/A] INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-11-08 07:05:47.927 [N/A] [N/A] INFO  [main] o.v.p.PrepaidPortalApplication - Starting PrepaidPortalApplication using Java 21.0.9 with PID 20280 (D:\repository\prepaid-portal\target\classes started by prasa in D:\repository\prepaid-portal)
+2025-11-08 07:05:47.929 [N/A] [N/A] INFO  [main] o.v.p.PrepaidPortalApplication - No active profile set, falling back to 1 default profile: "default"
+2025-11-08 07:05:48.535 [N/A] [N/A] INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-08 07:05:48.635 [N/A] [N/A] INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 87 ms. Found 4 JPA repository interfaces.
+2025-11-08 07:05:49.255 [N/A] [N/A] INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-11-08 07:05:49.269 [N/A] [N/A] INFO  [main] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-11-08 07:05:49.271 [N/A] [N/A] INFO  [main] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-11-08 07:05:49.271 [N/A] [N/A] INFO  [main] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.48]
+2025-11-08 07:05:49.315 [N/A] [N/A] INFO  [main] o.a.c.c.C.[.[localhost].[/api] - Initializing Spring embedded WebApplicationContext
+2025-11-08 07:05:49.316 [N/A] [N/A] INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1346 ms
+2025-11-08 07:05:49.472 [N/A] [N/A] INFO  [main] o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-08 07:05:49.522 [N/A] [N/A] INFO  [main] org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.33.Final
+2025-11-08 07:05:49.573 [N/A] [N/A] INFO  [main] o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-11-08 07:05:49.882 [N/A] [N/A] INFO  [main] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-08 07:05:49.912 [N/A] [N/A] INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-11-08 07:05:50.058 [N/A] [N/A] INFO  [main] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@598e5cb8
+2025-11-08 07:05:50.059 [N/A] [N/A] INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-11-08 07:05:50.087 [N/A] [N/A] WARN  [main] org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-11-08 07:05:50.132 [N/A] [N/A] INFO  [main] o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 18.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-11-08 07:05:51.084 [N/A] [N/A] INFO  [main] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-08 07:05:51.216 [N/A] [N/A] INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-08 07:05:51.548 [N/A] [N/A] INFO  [main] o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-11-08 07:05:51.666 [N/A] [N/A] DEBUG [main] org.hibernate.SQL - SELECT * FROM crypto_keys
+WHERE expires_at > ?
+ORDER BY created_at DESC
+LIMIT 1
+
+2025-11-08 07:05:51.668 [N/A] [N/A] TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (1:TIMESTAMP) <- [2025-11-08T07:00:51.571534500]
+2025-11-08 07:05:51.986 [N/A] [N/A] WARN  [main] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-11-08 07:05:52.533 [N/A] [N/A] INFO  [main] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-11-08 07:05:52.553 [N/A] [N/A] INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/api'
+2025-11-08 07:05:52.560 [N/A] [N/A] INFO  [main] o.v.p.PrepaidPortalApplication - Started PrepaidPortalApplication in 5.174 seconds (process running for 5.812)
+2025-11-08 07:05:58.044 [N/A] [N/A] INFO  [http-nio-8080-exec-1] o.a.c.c.C.[.[localhost].[/api] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-11-08 07:05:58.044 [N/A] [N/A] INFO  [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-11-08 07:05:58.045 [N/A] [N/A] INFO  [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2025-11-08 07:05:58.051 [oKg4knb7T6mJM7LTuBW3gw] [0:0:0:0:0:0:0:1] INFO  [http-nio-8080-exec-1] o.v.p.c.filter.RequestLoggingFilter - Incoming [GET /api/v1/public/keys] headers=host=localhost:8080; connection=keep-alive; cache-control=max-age=0; sec-ch-ua="Chromium";v="142", "Microsoft Edge";v="142", "Not_A Brand";v="99"; sec-ch-ua-mobile=?0; sec-ch-ua-platform="Windows"; upgrade-insecure-requests=1; user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36 Edg/142.0.0.0; accept=text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7; sec-fetch-site=none; sec-fetch-mode=navigate; sec-fetch-user=?1; sec-fetch-dest=document; accept-encoding=gzip, deflate, br, zstd; accept-language=en-GB,en-US;q=0.9,en-IN;q=0.8,en;q=0.7,ta;q=0.6; cookie=ext_name=gdgnlfdenkmjcfgjpnookbglpndleahm; 
+2025-11-08 07:05:58.082 [oKg4knb7T6mJM7LTuBW3gw] [0:0:0:0:0:0:0:1] INFO  [http-nio-8080-exec-1] o.v.p.c.aspect.MethodLoggingAspect - ➡️ Entering [online.vkay.prepaidportal.controller.PublicController.getActivePublicKey] with args: []
+2025-11-08 07:05:58.083 [oKg4knb7T6mJM7LTuBW3gw] [0:0:0:0:0:0:0:1] INFO  [http-nio-8080-exec-1] o.v.p.c.aspect.MethodLoggingAspect - ➡️ Entering [online.vkay.prepaidportal.service.CryptoKeyService.getActiveKey] with args: []
+2025-11-08 07:05:58.084 [oKg4knb7T6mJM7LTuBW3gw] [0:0:0:0:0:0:0:1] DEBUG [http-nio-8080-exec-1] org.hibernate.SQL - SELECT * FROM crypto_keys
+WHERE expires_at > ?
+ORDER BY created_at DESC
+LIMIT 1
+
+2025-11-08 07:05:58.086 [oKg4knb7T6mJM7LTuBW3gw] [0:0:0:0:0:0:0:1] TRACE [http-nio-8080-exec-1] org.hibernate.orm.jdbc.bind - binding parameter (1:TIMESTAMP) <- [2025-11-08T07:00:58.083632100]
+2025-11-08 07:05:58.089 [oKg4knb7T6mJM7LTuBW3gw] [0:0:0:0:0:0:0:1] INFO  [http-nio-8080-exec-1] o.v.p.c.aspect.MethodLoggingAspect - ✅ Exiting [online.vkay.prepaidportal.service.CryptoKeyService.getActiveKey] | resultType=CryptoKey | time=6ms
+2025-11-08 07:05:58.094 [oKg4knb7T6mJM7LTuBW3gw] [0:0:0:0:0:0:0:1] INFO  [http-nio-8080-exec-1] o.v.p.c.aspect.MethodLoggingAspect - ✅ Exiting [online.vkay.prepaidportal.controller.PublicController.getActivePublicKey] | resultType=ResponseEntity | time=13ms
+2025-11-08 07:05:58.188 [oKg4knb7T6mJM7LTuBW3gw] [0:0:0:0:0:0:0:1] DEBUG [http-nio-8080-exec-1] org.hibernate.SQL - insert into audit_http (created_at,created_by,direction,duration,ip,message,method,rc,request_id,channel,status,updated_at,updated_by,uri,username) values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)
+2025-11-08 07:05:58.190 [oKg4knb7T6mJM7LTuBW3gw] [0:0:0:0:0:0:0:1] TRACE [http-nio-8080-exec-1] org.hibernate.orm.jdbc.bind - binding parameter (1:TIMESTAMP) <- [2025-11-08T12:35:58.174305400]
+2025-11-08 07:05:58.191 [oKg4knb7T6mJM7LTuBW3gw] [0:0:0:0:0:0:0:1] TRACE [http-nio-8080-exec-1] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [system]
+2025-11-08 07:05:58.191 [oKg4knb7T6mJM7LTuBW3gw] [0:0:0:0:0:0:0:1] TRACE [http-nio-8080-exec-1] org.hibernate.orm.jdbc.bind - binding parameter (3:VARCHAR) <- [INBOUND]
+2025-11-08 07:05:58.191 [oKg4knb7T6mJM7LTuBW3gw] [0:0:0:0:0:0:0:1] TRACE [http-nio-8080-exec-1] org.hibernate.orm.jdbc.bind - binding parameter (4:BIGINT) <- [99]
+2025-11-08 07:05:58.192 [oKg4knb7T6mJM7LTuBW3gw] [0:0:0:0:0:0:0:1] TRACE [http-nio-8080-exec-1] org.hibernate.orm.jdbc.bind - binding parameter (5:VARCHAR) <- [0:0:0:0:0:0:0:1]
+2025-11-08 07:05:58.192 [oKg4knb7T6mJM7LTuBW3gw] [0:0:0:0:0:0:0:1] TRACE [http-nio-8080-exec-1] org.hibernate.orm.jdbc.bind - binding parameter (6:VARCHAR) <- [null]
+2025-11-08 07:05:58.192 [oKg4knb7T6mJM7LTuBW3gw] [0:0:0:0:0:0:0:1] TRACE [http-nio-8080-exec-1] org.hibernate.orm.jdbc.bind - binding parameter (7:VARCHAR) <- [GET]
+2025-11-08 07:05:58.193 [oKg4knb7T6mJM7LTuBW3gw] [0:0:0:0:0:0:0:1] TRACE [http-nio-8080-exec-1] org.hibernate.orm.jdbc.bind - binding parameter (8:VARCHAR) <- [null]
+2025-11-08 07:05:58.193 [oKg4knb7T6mJM7LTuBW3gw] [0:0:0:0:0:0:0:1] TRACE [http-nio-8080-exec-1] org.hibernate.orm.jdbc.bind - binding parameter (9:VARCHAR) <- [oKg4knb7T6mJM7LTuBW3gw]
+2025-11-08 07:05:58.193 [oKg4knb7T6mJM7LTuBW3gw] [0:0:0:0:0:0:0:1] TRACE [http-nio-8080-exec-1] org.hibernate.orm.jdbc.bind - binding parameter (10:VARCHAR) <- [null]
+2025-11-08 07:05:58.193 [oKg4knb7T6mJM7LTuBW3gw] [0:0:0:0:0:0:0:1] TRACE [http-nio-8080-exec-1] org.hibernate.orm.jdbc.bind - binding parameter (11:INTEGER) <- [200]
+2025-11-08 07:05:58.193 [oKg4knb7T6mJM7LTuBW3gw] [0:0:0:0:0:0:0:1] TRACE [http-nio-8080-exec-1] org.hibernate.orm.jdbc.bind - binding parameter (12:TIMESTAMP) <- [2025-11-08T12:35:58.174305400]
+2025-11-08 07:05:58.193 [oKg4knb7T6mJM7LTuBW3gw] [0:0:0:0:0:0:0:1] TRACE [http-nio-8080-exec-1] org.hibernate.orm.jdbc.bind - binding parameter (13:VARCHAR) <- [system]
+2025-11-08 07:05:58.193 [oKg4knb7T6mJM7LTuBW3gw] [0:0:0:0:0:0:0:1] TRACE [http-nio-8080-exec-1] org.hibernate.orm.jdbc.bind - binding parameter (14:VARCHAR) <- [/api/v1/public/keys]
+2025-11-08 07:05:58.193 [oKg4knb7T6mJM7LTuBW3gw] [0:0:0:0:0:0:0:1] TRACE [http-nio-8080-exec-1] org.hibernate.orm.jdbc.bind - binding parameter (15:VARCHAR) <- [null]
+2025-11-08 07:06:34.284 [N/A] [N/A] INFO  [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-11-08 07:06:34.291 [N/A] [N/A] INFO  [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-11-08 07:06:34.295 [N/A] [N/A] INFO  [SpringApplicationShutdownHook] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-08 07:06:34.297 [N/A] [N/A] INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-11-08 07:06:34.304 [N/A] [N/A] INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-11-08 07:06:36.762 [N/A] [N/A] INFO  [main] o.v.p.PrepaidPortalApplication - Starting PrepaidPortalApplication using Java 21.0.9 with PID 20540 (D:\repository\prepaid-portal\target\classes started by prasa in D:\repository\prepaid-portal)
+2025-11-08 07:06:36.764 [N/A] [N/A] INFO  [main] o.v.p.PrepaidPortalApplication - No active profile set, falling back to 1 default profile: "default"
+2025-11-08 07:06:37.354 [N/A] [N/A] INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-08 07:06:37.457 [N/A] [N/A] INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 94 ms. Found 4 JPA repository interfaces.
+2025-11-08 07:06:38.090 [N/A] [N/A] INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-11-08 07:06:38.103 [N/A] [N/A] INFO  [main] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-11-08 07:06:38.104 [N/A] [N/A] INFO  [main] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-11-08 07:06:38.105 [N/A] [N/A] INFO  [main] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.48]
+2025-11-08 07:06:38.152 [N/A] [N/A] INFO  [main] o.a.c.c.C.[.[localhost].[/api] - Initializing Spring embedded WebApplicationContext
+2025-11-08 07:06:38.152 [N/A] [N/A] INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1350 ms
+2025-11-08 07:06:38.328 [N/A] [N/A] INFO  [main] o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-08 07:06:38.378 [N/A] [N/A] INFO  [main] org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.33.Final
+2025-11-08 07:06:38.417 [N/A] [N/A] INFO  [main] o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-11-08 07:06:38.721 [N/A] [N/A] INFO  [main] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-08 07:06:38.749 [N/A] [N/A] INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-11-08 07:06:38.930 [N/A] [N/A] INFO  [main] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@20a946d9
+2025-11-08 07:06:38.935 [N/A] [N/A] INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-11-08 07:06:38.971 [N/A] [N/A] WARN  [main] org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-11-08 07:06:38.996 [N/A] [N/A] INFO  [main] o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 18.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-11-08 07:06:40.020 [N/A] [N/A] INFO  [main] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-08 07:06:40.143 [N/A] [N/A] INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-08 07:06:40.489 [N/A] [N/A] INFO  [main] o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-11-08 07:06:41.011 [N/A] [N/A] WARN  [main] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-11-08 07:06:41.511 [N/A] [N/A] INFO  [main] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-11-08 07:06:41.537 [N/A] [N/A] INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/api'
+2025-11-08 07:06:41.545 [N/A] [N/A] INFO  [main] o.v.p.PrepaidPortalApplication - Started PrepaidPortalApplication in 5.337 seconds (process running for 5.996)
+2025-11-08 07:06:43.549 [N/A] [N/A] INFO  [http-nio-8080-exec-1] o.a.c.c.C.[.[localhost].[/api] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-11-08 07:06:43.549 [N/A] [N/A] INFO  [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-11-08 07:06:43.550 [N/A] [N/A] INFO  [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2025-11-08 07:06:43.558 [33gLmxhvTYmuwcizL6S7LA] [0:0:0:0:0:0:0:1] INFO  [http-nio-8080-exec-1] o.v.p.c.filter.RequestLoggingFilter - Incoming [GET /api/v1/public/keys] headers=host=localhost:8080; connection=keep-alive; cache-control=max-age=0; sec-ch-ua="Chromium";v="142", "Microsoft Edge";v="142", "Not_A Brand";v="99"; sec-ch-ua-mobile=?0; sec-ch-ua-platform="Windows"; upgrade-insecure-requests=1; user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36 Edg/142.0.0.0; accept=text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7; sec-fetch-site=none; sec-fetch-mode=navigate; sec-fetch-user=?1; sec-fetch-dest=document; accept-encoding=gzip, deflate, br, zstd; accept-language=en-GB,en-US;q=0.9,en-IN;q=0.8,en;q=0.7,ta;q=0.6; cookie=ext_name=gdgnlfdenkmjcfgjpnookbglpndleahm; 
+2025-11-08 07:06:43.592 [33gLmxhvTYmuwcizL6S7LA] [0:0:0:0:0:0:0:1] INFO  [http-nio-8080-exec-1] o.v.p.c.aspect.MethodLoggingAspect - ➡️ Entering [online.vkay.prepaidportal.controller.PublicController.getActivePublicKey] with args: []
+2025-11-08 07:06:43.593 [33gLmxhvTYmuwcizL6S7LA] [0:0:0:0:0:0:0:1] INFO  [http-nio-8080-exec-1] o.v.p.c.aspect.MethodLoggingAspect - ➡️ Entering [online.vkay.prepaidportal.service.CryptoKeyService.getActiveKey] with args: []
+2025-11-08 07:06:43.598 [33gLmxhvTYmuwcizL6S7LA] [0:0:0:0:0:0:0:1] INFO  [http-nio-8080-exec-1] o.v.p.c.aspect.MethodLoggingAspect - ✅ Exiting [online.vkay.prepaidportal.service.CryptoKeyService.getActiveKey] | resultType=CryptoKey | time=4ms
+2025-11-08 07:06:43.604 [33gLmxhvTYmuwcizL6S7LA] [0:0:0:0:0:0:0:1] INFO  [http-nio-8080-exec-1] o.v.p.c.aspect.MethodLoggingAspect - ✅ Exiting [online.vkay.prepaidportal.controller.PublicController.getActivePublicKey] | resultType=ResponseEntity | time=13ms
+2025-11-08 07:06:52.152 [N/A] [N/A] INFO  [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-11-08 07:06:52.160 [N/A] [N/A] INFO  [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-11-08 07:06:52.165 [N/A] [N/A] INFO  [SpringApplicationShutdownHook] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-08 07:06:52.167 [N/A] [N/A] INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-11-08 07:06:52.173 [N/A] [N/A] INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-11-08 07:06:54.676 [N/A] [N/A] INFO  [main] o.v.p.PrepaidPortalApplication - Starting PrepaidPortalApplication using Java 21.0.9 with PID 21176 (D:\repository\prepaid-portal\target\classes started by prasa in D:\repository\prepaid-portal)
+2025-11-08 07:06:54.677 [N/A] [N/A] INFO  [main] o.v.p.PrepaidPortalApplication - No active profile set, falling back to 1 default profile: "default"
+2025-11-08 07:06:55.321 [N/A] [N/A] INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-08 07:06:55.421 [N/A] [N/A] INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 89 ms. Found 4 JPA repository interfaces.
+2025-11-08 07:06:56.123 [N/A] [N/A] INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-11-08 07:06:56.134 [N/A] [N/A] INFO  [main] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-11-08 07:06:56.135 [N/A] [N/A] INFO  [main] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-11-08 07:06:56.136 [N/A] [N/A] INFO  [main] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.48]
+2025-11-08 07:06:56.182 [N/A] [N/A] INFO  [main] o.a.c.c.C.[.[localhost].[/api] - Initializing Spring embedded WebApplicationContext
+2025-11-08 07:06:56.182 [N/A] [N/A] INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1469 ms
+2025-11-08 07:06:56.345 [N/A] [N/A] INFO  [main] o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-08 07:06:56.394 [N/A] [N/A] INFO  [main] org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.33.Final
+2025-11-08 07:06:56.434 [N/A] [N/A] INFO  [main] o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-11-08 07:06:56.790 [N/A] [N/A] INFO  [main] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-08 07:06:56.823 [N/A] [N/A] INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-11-08 07:06:57.003 [N/A] [N/A] INFO  [main] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@4cadd4d4
+2025-11-08 07:06:57.007 [N/A] [N/A] INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-11-08 07:06:57.038 [N/A] [N/A] WARN  [main] org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-11-08 07:06:57.060 [N/A] [N/A] INFO  [main] o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 18.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-11-08 07:06:58.022 [N/A] [N/A] INFO  [main] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-08 07:06:58.153 [N/A] [N/A] INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-08 07:06:58.516 [N/A] [N/A] INFO  [main] o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-11-08 07:06:59.036 [N/A] [N/A] WARN  [main] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-11-08 07:06:59.627 [N/A] [N/A] INFO  [main] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-11-08 07:06:59.648 [N/A] [N/A] INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/api'
+2025-11-08 07:06:59.656 [N/A] [N/A] INFO  [main] o.v.p.PrepaidPortalApplication - Started PrepaidPortalApplication in 5.53 seconds (process running for 6.174)
+2025-11-08 07:07:00.190 [N/A] [N/A] INFO  [http-nio-8080-exec-1] o.a.c.c.C.[.[localhost].[/api] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-11-08 07:07:00.190 [N/A] [N/A] INFO  [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-11-08 07:07:00.191 [N/A] [N/A] INFO  [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2025-11-08 07:07:00.211 [GatAwd9CSQCgrnljPSLcjg] [0:0:0:0:0:0:0:1] INFO  [http-nio-8080-exec-1] o.v.p.c.filter.RequestLoggingFilter - Incoming [GET /api/v1/public/keys] headers=host=localhost:8080; connection=keep-alive; cache-control=max-age=0; sec-ch-ua="Chromium";v="142", "Microsoft Edge";v="142", "Not_A Brand";v="99"; sec-ch-ua-mobile=?0; sec-ch-ua-platform="Windows"; upgrade-insecure-requests=1; user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36 Edg/142.0.0.0; accept=text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7; sec-fetch-site=none; sec-fetch-mode=navigate; sec-fetch-user=?1; sec-fetch-dest=document; accept-encoding=gzip, deflate, br, zstd; accept-language=en-GB,en-US;q=0.9,en-IN;q=0.8,en;q=0.7,ta;q=0.6; cookie=ext_name=gdgnlfdenkmjcfgjpnookbglpndleahm; 
+2025-11-08 07:07:00.274 [GatAwd9CSQCgrnljPSLcjg] [0:0:0:0:0:0:0:1] INFO  [http-nio-8080-exec-1] o.v.p.c.aspect.MethodLoggingAspect - ➡️ Entering [online.vkay.prepaidportal.controller.PublicController.getActivePublicKey] with args: []
+2025-11-08 07:07:00.274 [GatAwd9CSQCgrnljPSLcjg] [0:0:0:0:0:0:0:1] INFO  [http-nio-8080-exec-1] o.v.p.c.aspect.MethodLoggingAspect - ➡️ Entering [online.vkay.prepaidportal.service.CryptoKeyService.getActiveKey] with args: []
+2025-11-08 07:07:00.282 [GatAwd9CSQCgrnljPSLcjg] [0:0:0:0:0:0:0:1] INFO  [http-nio-8080-exec-1] o.v.p.c.aspect.MethodLoggingAspect - ✅ Exiting [online.vkay.prepaidportal.service.CryptoKeyService.getActiveKey] | resultType=CryptoKey | time=8ms
+2025-11-08 07:07:00.288 [GatAwd9CSQCgrnljPSLcjg] [0:0:0:0:0:0:0:1] INFO  [http-nio-8080-exec-1] o.v.p.c.aspect.MethodLoggingAspect - ✅ Exiting [online.vkay.prepaidportal.controller.PublicController.getActivePublicKey] | resultType=ResponseEntity | time=16ms
+2025-11-08 07:19:49.490 [N/A] [N/A] INFO  [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-11-08 07:19:49.507 [N/A] [N/A] INFO  [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-11-08 07:19:49.511 [N/A] [N/A] INFO  [SpringApplicationShutdownHook] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-08 07:19:49.513 [N/A] [N/A] INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-11-08 07:19:49.518 [N/A] [N/A] INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-11-08 07:19:57.143 [N/A] [N/A] INFO  [main] o.v.p.PrepaidPortalApplication - Starting PrepaidPortalApplication using Java 21.0.9 with PID 7984 (D:\repository\prepaid-portal\target\classes started by prasa in D:\repository\prepaid-portal)
+2025-11-08 07:19:57.145 [N/A] [N/A] INFO  [main] o.v.p.PrepaidPortalApplication - No active profile set, falling back to 1 default profile: "default"
+2025-11-08 07:19:57.752 [N/A] [N/A] INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-08 07:19:57.831 [N/A] [N/A] INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 71 ms. Found 4 JPA repository interfaces.
+2025-11-08 07:19:58.496 [N/A] [N/A] INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-11-08 07:19:58.507 [N/A] [N/A] INFO  [main] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-11-08 07:19:58.509 [N/A] [N/A] INFO  [main] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-11-08 07:19:58.509 [N/A] [N/A] INFO  [main] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.48]
+2025-11-08 07:19:58.554 [N/A] [N/A] INFO  [main] o.a.c.c.C.[.[localhost].[/api] - Initializing Spring embedded WebApplicationContext
+2025-11-08 07:19:58.555 [N/A] [N/A] INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1371 ms
+2025-11-08 07:19:58.732 [N/A] [N/A] INFO  [main] o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-08 07:19:58.786 [N/A] [N/A] INFO  [main] org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.33.Final
+2025-11-08 07:19:58.822 [N/A] [N/A] INFO  [main] o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-11-08 07:19:59.137 [N/A] [N/A] INFO  [main] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-08 07:19:59.178 [N/A] [N/A] INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-11-08 07:19:59.373 [N/A] [N/A] INFO  [main] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@5dd3727c
+2025-11-08 07:19:59.375 [N/A] [N/A] INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-11-08 07:19:59.403 [N/A] [N/A] WARN  [main] org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-11-08 07:19:59.425 [N/A] [N/A] INFO  [main] o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 18.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-11-08 07:20:00.516 [N/A] [N/A] INFO  [main] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-08 07:20:00.625 [N/A] [N/A] WARN  [main] o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+2025-11-08 07:20:00.626 [N/A] [N/A] WARN  [main] o.h.e.jdbc.spi.SqlExceptionHelper - constraint "uk7lcb6glmvwlro3p2w2cewxtvd" of relation "permissions" does not exist, skipping
+2025-11-08 07:20:00.635 [N/A] [N/A] WARN  [main] o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+2025-11-08 07:20:00.635 [N/A] [N/A] WARN  [main] o.h.e.jdbc.spi.SqlExceptionHelper - constraint "ukch1113horj4qr56f91omojv8" of relation "roles" does not exist, skipping
+2025-11-08 07:20:00.687 [N/A] [N/A] INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-08 07:20:01.047 [N/A] [N/A] INFO  [main] o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-11-08 07:20:01.554 [N/A] [N/A] WARN  [main] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-11-08 07:20:02.051 [N/A] [N/A] INFO  [main] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-11-08 07:20:02.070 [N/A] [N/A] INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/api'
+2025-11-08 07:20:02.077 [N/A] [N/A] INFO  [main] o.v.p.PrepaidPortalApplication - Started PrepaidPortalApplication in 5.642 seconds (process running for 6.339)
+2025-11-08 07:21:10.287 [N/A] [N/A] INFO  [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-11-08 07:21:10.299 [N/A] [N/A] INFO  [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-11-08 07:21:10.306 [N/A] [N/A] INFO  [SpringApplicationShutdownHook] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-08 07:21:10.308 [N/A] [N/A] INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-11-08 07:21:10.312 [N/A] [N/A] INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-11-08 07:21:14.943 [N/A] [N/A] INFO  [main] o.v.p.PrepaidPortalApplication - Starting PrepaidPortalApplication using Java 21.0.9 with PID 11920 (D:\repository\prepaid-portal\target\classes started by prasa in D:\repository\prepaid-portal)
+2025-11-08 07:21:14.944 [N/A] [N/A] INFO  [main] o.v.p.PrepaidPortalApplication - No active profile set, falling back to 1 default profile: "default"
+2025-11-08 07:21:15.658 [N/A] [N/A] INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-08 07:21:15.757 [N/A] [N/A] INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 90 ms. Found 4 JPA repository interfaces.
+2025-11-08 07:21:16.511 [N/A] [N/A] INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-11-08 07:21:16.524 [N/A] [N/A] INFO  [main] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-11-08 07:21:16.525 [N/A] [N/A] INFO  [main] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-11-08 07:21:16.526 [N/A] [N/A] INFO  [main] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.48]
+2025-11-08 07:21:16.580 [N/A] [N/A] INFO  [main] o.a.c.c.C.[.[localhost].[/api] - Initializing Spring embedded WebApplicationContext
+2025-11-08 07:21:16.581 [N/A] [N/A] INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1597 ms
+2025-11-08 07:21:16.791 [N/A] [N/A] INFO  [main] o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-08 07:21:16.857 [N/A] [N/A] INFO  [main] org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.33.Final
+2025-11-08 07:21:16.899 [N/A] [N/A] INFO  [main] o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-11-08 07:21:17.253 [N/A] [N/A] INFO  [main] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-08 07:21:17.337 [N/A] [N/A] INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-11-08 07:21:17.500 [N/A] [N/A] INFO  [main] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@7d95166a
+2025-11-08 07:21:17.501 [N/A] [N/A] INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-11-08 07:21:17.529 [N/A] [N/A] WARN  [main] org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-11-08 07:21:17.551 [N/A] [N/A] INFO  [main] o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 18.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-11-08 07:21:18.632 [N/A] [N/A] INFO  [main] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-08 07:21:18.790 [N/A] [N/A] INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-08 07:21:19.140 [N/A] [N/A] INFO  [main] o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-11-08 07:21:19.665 [N/A] [N/A] WARN  [main] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-11-08 07:21:20.287 [N/A] [N/A] INFO  [main] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-11-08 07:21:20.306 [N/A] [N/A] INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/api'
+2025-11-08 07:21:20.314 [N/A] [N/A] INFO  [main] o.v.p.PrepaidPortalApplication - Started PrepaidPortalApplication in 5.923 seconds (process running for 6.562)
+2025-11-08 10:24:41.286 [N/A] [N/A] WARN  [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=22m50s922ms225µs800ns).
+2025-11-08 11:36:39.893 [N/A] [N/A] INFO  [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-11-08 11:36:39.935 [N/A] [N/A] INFO  [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-11-08 11:36:39.990 [N/A] [N/A] INFO  [SpringApplicationShutdownHook] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-08 11:36:40.038 [N/A] [N/A] INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-11-08 11:36:40.060 [N/A] [N/A] INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.

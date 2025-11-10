@@ -1,0 +1,21 @@
+services:
+  postgres:
+    image: postgres:18
+    container_name: postgres-db
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: prepaid_portal
+      POSTGRES_USER: prepaid_user
+      POSTGRES_PASSWORD: prepaid_pass
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U prepaid_user -d prepaid_portal"]
+      interval: 5s
+      timeout: 3s
+      retries: 5
+
+volumes:
+  postgres_data:
