@@ -4,9 +4,9 @@ services:
     container_name: postgres-db
     restart: unless-stopped
     environment:
-      POSTGRES_DB: prepaid_portal
-      POSTGRES_USER: prepaid_user
-      POSTGRES_PASSWORD: prepaid_pass
+      POSTGRES_DB: ${DB_NAME}
+      POSTGRES_USER: ${DB_USERNAME}
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
     ports:
       - "5432:5432"
     volumes:
@@ -16,6 +16,29 @@ services:
       interval: 5s
       timeout: 3s
       retries: 5
+
+  backend:
+    build: ./backend
+    container_name: prepaid-backend
+    restart: unless-stopped
+    env_file:
+      - ./.env
+    depends_on:
+      postgres:
+        condition: service_healthy
+    ports:
+      - "9080:8080"
+
+  frontend:
+    build: ./frontend
+    container_name: prepaid-frontend
+    restart: unless-stopped
+    env_file:
+      - ./.env
+    ports:
+      - "9000:80"
+    depends_on:
+      - backend
 
 volumes:
   postgres_data:
