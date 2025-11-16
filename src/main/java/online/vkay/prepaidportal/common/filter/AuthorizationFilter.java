@@ -38,6 +38,7 @@ public class AuthorizationFilter implements Filter {
     private static final String[] PUBLIC_ENDPOINTS = {
             "/v1/auth/check-sso",
             "/v1/public/**",
+            "/v1/dev/**",
             "/actuator/**",
             "/swagger-ui/**",
             "/v3/api-docs/**"

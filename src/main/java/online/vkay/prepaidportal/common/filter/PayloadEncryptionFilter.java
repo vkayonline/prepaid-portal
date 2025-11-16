@@ -35,6 +35,7 @@ public class PayloadEncryptionFilter implements Filter {
     // ✅ Skip encryption/decryption for these endpoints
     private static final String[] PUBLIC_ENDPOINTS = {
             "/v1/public/**",
+            "/v1/dev/**",
             "/actuator/**",
             "/swagger-ui/**",
             "/v3/api-docs/**"
